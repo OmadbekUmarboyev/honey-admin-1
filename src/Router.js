@@ -4,7 +4,7 @@ import { AddProduct } from "./Pages/AppProdct/AddProduct"
 import { Orders } from "./Pages/Orders/Orders";
 import { OrderView } from "./Pages/OrderView/OrderView"
 import { NotFounded } from "./Pages/NotFounded/NotFounded";
-import { Config } from "./Config/Config"
+// import { Config } from "./Config/Config"
 import { Navbar } from "./Components/Navbar/Navbar"
 import { Home } from "./Pages/Home/Home"
 

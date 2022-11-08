@@ -4,7 +4,7 @@ import "./AddProduct.css"
 export function AddProduct() {
   const [images, setImages] = useState([])
   const [imgData, setImgData] = useState([])
-  const [typeHandleSubmit, setTypeHandleSubmit] = useState([])
+  const [typeHandleSubmit] = useState([])
   return (
     <div>
       <form>
