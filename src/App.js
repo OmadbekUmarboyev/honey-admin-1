@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Router } from "./Router";
+// import { Router } from "./Router";
+// import { Backdrop, CircularProgress } from "@mui/material";
+// import { useSelector } from "react-redux";
+// import { Login } from "./Pages/Login/Login";
+import AOS from "aos";
 
-function App() {
+
+
+export function App() {
+  // const loading = useSelector((state) => state.reLoading);
+  // const admin = useSelector((state) => state.admin)
+
+  AOS.init();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Router />
+      <Backdrop sx={{ color: "#fff", zIndex: "99999999999999" }} open={loading}>
+        <CircularProgress color="inherit" />
+      </Backdrop> */}
+      <Router />
+    </>
   );
 }
 
