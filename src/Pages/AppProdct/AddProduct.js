@@ -5,17 +5,53 @@ export function AddProduct() {
   const [images, setImages] = useState([])
   const [imgData, setImgData] = useState([])
   const [typeHandleSubmit] = useState([])
+  const [product, setProduct] = useState({
+    name: "",
+    about: "",
+    area: "",
+    cost: "",
+    weight: "",
+  });
+
+  const inputChange = (e) => {
+    setProduct({
+      ...product,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  console.log(product);
   return (
     <div>
       <form>
         <div>
           <div>
-            <input type="text" />
-            <input type="text" />
+            <input type="text"
+              name='name'
+              placeholder='Name...'
+              onChange={inputChange}
+              value={product.name}
+            />
+            <input type="text"
+              placeholder='Area...'
+              name='area'
+              onChange={inputChange}
+              value={product.area}
+            />
           </div>
           <div>
-            <input type="text" />
-            <input type="text" />
+            <input type="number"
+              placeholder='Cost...'
+              name='cost'
+              onChange={inputChange}
+              value={product.cost}
+            />
+            <input type="text"
+              placeholder='Weight...'
+              name='weight'
+              onChange={inputChange}
+              value={product.weight}
+            />
           </div>
           <div>
             {imgData.map((item, index) => {
@@ -25,10 +61,7 @@ export function AddProduct() {
                     <figure id="upload-images-crud">
                       <button
                         type="button"
-                        onClick={() => {
-                          setImgData(imgData.filter((item, i) => i !== index));
-                        }}
-                      >
+                        onClick={() => { setImgData(imgData.filter((item, i) => i !== index)); }}>
                         X
                       </button>
                       <img style={typeHandleSubmit === "Add Product" ? { display: "block" } : { display: "none" }} src={typeHandleSubmit === "Add Product" ? URL.createObjectURL(item) : {}} alt="" />
@@ -63,6 +96,12 @@ export function AddProduct() {
             </label>
 
           </div>
+          <textarea name="about"
+            onChange={inputChange}
+            value={product.about}
+            id="" cols="30" rows="10" placeholder='About product...'>
+
+          </textarea>
         </div>
       </form>
     </div>
