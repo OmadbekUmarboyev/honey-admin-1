@@ -1,0 +1,45 @@
+#homecard_container {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#homecard_container > div {
+  width: 320px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.home_card1 {
+  background: #3f51b5;
+}
+
+.home_card2 {
+  background: #009688;
+}
+
+.home_card3 {
+  background: #4caf50;
+}
+
+.home_card4 {
+  background: #ff9800;
+}
+
+.home_card5 {
+  background: #ff5722;
+}
+
+.home_card6 {
+  background: #795548;
+}

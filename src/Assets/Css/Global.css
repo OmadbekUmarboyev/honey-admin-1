@@ -1,0 +1,113 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../Fonts/Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.07rem;
+  font-family: Roboto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ccc;
+}
+
+#root {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+#router_container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 500s ease-in-out 0s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #004d40;
+  border-radius: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+thead {
+  text-align: center;
+  color: #004d40;
+  width: 100%;
+  height: 60px;
+  font-weight: 600;
+  background: #a6a6a6;
+  position: sticky;
+  top: 0;
+}
+
+tbody > :nth-child(odd) {
+  background: rgb(217, 239, 253);
+}
+
+tbody > :nth-child(even) {
+  background: rgba(0, 77, 64, 0.05);
+}
+
+td > figure > img {
+  width: 80px;
+  height: 80px;
+}
+
+td {
+  text-align: center;
+}
+
+tr {
+  height: 100px;
+}

@@ -38,7 +38,7 @@ export function Charts() {
     const api = process.env.REACT_APP_API;
     const [guests, setGuests] = useState([]);
     useEffect(() => {
-        axios(`${api}view/guest`)
+        axios(`https://honey.pandashop.uz/guest/view/${30}`)
             .then((res) => {
                 setGuests(res.data);
             })

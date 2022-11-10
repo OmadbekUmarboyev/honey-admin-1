@@ -1,17 +1,19 @@
-import React from 'react'
-import { Charts } from '../../Components/Charts/Charts'
-import { HeaderCards } from '../../Components/HeaderCards/HeaderCards'
-import { AddProduct } from '../AppProdct/AddProduct'
-import "./Home.css"
+import React from "react";
+import { Charts } from "../../Components/Charts/Charts";
+import { HomeCards } from "../../Components/HomeCards/HomeCards";
+import { MostSeen } from "../../Components/MostSeen/MostSeen";
+import "./Home.css";
 
 export function Home() {
-
   return (
-    <div>
-      Home
-      <HeaderCards />
-      <Charts />
-      <AddProduct />
+    <div id="home">
+      <div className="home_left_card">
+        <HomeCards />
+        <Charts />
+      </div>
+      <div className="home_right_card">
+        <MostSeen />
+      </div>
     </div>
-  )
+  );
 }
